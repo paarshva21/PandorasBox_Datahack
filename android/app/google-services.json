@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "846060205958",
+    "project_id": "datahack-8338e",
+    "storage_bucket": "datahack-8338e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846060205958:android:4c55a98e37e62ac6339e07",
+        "android_client_info": {
+          "package_name": "com.example.datahack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846060205958-c3vgojlj7ldetshvectomga23pofva0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx6eo04TXj1XmBB8Jqpd3-j74UY4_6tjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846060205958-c3vgojlj7ldetshvectomga23pofva0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
