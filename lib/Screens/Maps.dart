@@ -12,9 +12,26 @@ class Maps extends StatefulWidget {
 
 class _MapsState extends State<Maps> {
   late GoogleMapController _mapController;
-  final Set<Marker> _markers = <Marker>{};
   var user = FirebaseAuth.instance.currentUser;
   final LatLng _center = const LatLng(45.521563, -122.677433);
+
+  final Set<Marker> _markers = {
+    Marker(
+      markerId: MarkerId('Portland'),
+      position: LatLng(45.523064, -122.676483),
+      infoWindow: InfoWindow(title: 'Portland'),
+    ),
+    Marker(
+      markerId: MarkerId('Seattle'),
+      position: LatLng(47.606209, -122.332071),
+      infoWindow: InfoWindow(title: 'Seattle'),
+    ),
+    Marker(
+      markerId: MarkerId('Lincoln City'),
+      position: LatLng(44.9621, -124.0159),
+      infoWindow: InfoWindow(title: 'Seattle'),
+    ),
+  };
 
   void _onMapCreated(GoogleMapController controller) {
     _mapController = controller;
@@ -32,10 +49,10 @@ class _MapsState extends State<Maps> {
         child: Scaffold(
       body: Container(
         child: GoogleMap(
-            initialCameraPosition: CameraPosition(
-                target: _center,
-            zoom: 11.0),
-            onMapCreated: _onMapCreated),
+          initialCameraPosition: CameraPosition(target: _center, zoom: 7.0),
+          onMapCreated: _onMapCreated,
+          markers: _markers,
+        ),
       ),
       drawer: NavDrawer(),
     ));

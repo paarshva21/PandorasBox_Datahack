@@ -21,10 +21,10 @@ class _UserPageState extends State<UserPage> {
   int currentIndex = 0;
   final user = FirebaseAuth.instance.currentUser!;
   final screens = [
-    Home(), Payment(), Maps()
+    LineChartSample1(), Payment(), Maps()
   ];
   final screenNames = [
-    "Home", "Payment", "Maps"
+    "Analytics", "Payment", "Maps"
   ];
   @override
   Widget build(BuildContext context) {
@@ -51,10 +51,10 @@ class _UserPageState extends State<UserPage> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.fastfood,
+                Icons.analytics_outlined,
                 color: Colors.white,
               ),
-              label: "Recipes",
+              label: "Analytics",
             ),
             BottomNavigationBarItem(
               icon: FaIcon(
